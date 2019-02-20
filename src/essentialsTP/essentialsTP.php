@@ -1122,7 +1122,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                         $sql          = $this->fetchall();
                         if( count($sql) > 0 ) {
                             $sql = $sql[0];
-                            foreach($this->getServer()->getLevels() as $aval_world => $curr_world)
+                            foreach($this->getServer()->getLevelManager()->getLevels() as $aval_world => $curr_world)
                             {
                                 if ($sql['world'] == $curr_world->getDisplayName())
                                 {
