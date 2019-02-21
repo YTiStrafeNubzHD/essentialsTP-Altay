@@ -336,7 +336,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
         $player = $event->getPlayer();
         $block  = $event->getBlock();
         //check tile above is not sign as breaking it will break sign
-        $tile_above = $block->getLevelManager()->getLevel()->getTile(new Vector3($block->getFloorX(), ($block->getFloorY()+1), $block->getFloorZ()));
+        $tile_above = $block->getLevel()->getTile(new Vector3($block->getFloorX(), ($block->getFloorY()+1), $block->getFloorZ()));
         if($tile_above instanceof Sign) {
             $text = $tile_above->getText();
 
