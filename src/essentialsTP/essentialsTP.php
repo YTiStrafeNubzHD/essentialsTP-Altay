@@ -467,7 +467,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
             }
             else
             {
-                    $this->world = $player->getLevelManager()->getLevel()->getDisplayName();
+                    $this->world = $player->getLevel()->getDisplayName();
                     $this->prepare = $this->db2->prepare("SELECT x,y,z,world FROM spawns WHERE world = :world");
                     $this->prepare->bindValue(":world", $this->world, SQLITE3_TEXT);
                     $this->result = $this->prepare->execute();
