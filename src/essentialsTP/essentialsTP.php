@@ -148,7 +148,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
             round($player->getX()),
             round($player->getY()),
             round($player->getZ()),
-            $player->getLevelManager()->getLevel()
+            $player->getLevel()
         );
     }
 
