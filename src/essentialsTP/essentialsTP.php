@@ -1041,7 +1041,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 if ($sender instanceof Player)
                 {
-                    $this->world = $sender->getLevelManager()->getLevel()->getDisplayName();
+                    $this->world = $sender->getLevel()->getDisplayName();
                     foreach($this->getServer()->getLevelManager()->getLevels() as $aval_world => $curr_world)
                     {
                         if ($this->world == $curr_world->getDisplayName())
