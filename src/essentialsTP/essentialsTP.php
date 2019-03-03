@@ -599,7 +599,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                     {
                         $this->player_cords = array('x' => (int) $sender->getX(),'y' => (int) $sender->getY(),'z' => (int) $sender->getZ());
                         $this->username = $sender->getName();
-                        $this->world = $sender->getLevelManager()->getLevel()->getDisplayName();
+                        $this->world = $sender->getLevel()->getDisplayName();
                         $this->home_loc = $args[0];
                         $this->prepare = $this->db2->prepare("SELECT player,title,x,y,z,world FROM homes WHERE player = :name AND title = :title");
                         $this->prepare->bindValue(":name", $this->username, SQLITE3_TEXT);
